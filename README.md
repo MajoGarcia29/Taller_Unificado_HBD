@@ -116,3 +116,53 @@ El dataset final contiene **100 filas** y **25 columnas**, incluyendo:
 - [Kaggle API](https://github.com/Kaggle/kaggle-api) — descarga del dataset
 - [pandas](https://pandas.pydata.org/) — procesamiento de datos
 ---
+
+
+
+---
+
+## Parte II — Dashboard Interactivo
+
+Dashboard interactivo generado con **Plotly** a partir del dataset procesado por la Parte I.
+
+### ¿Qué hace?
+
+Lee `staging/youtube_processed/youtube_top100_global.csv` y los archivos `*_category_id.json`
+de `staging/youtube_raw/`, construye 8 visualizaciones interactivas y genera un archivo HTML
+autocontenido en `parte_2/dashboard_youtube.html`.
+
+### Visualizaciones incluidas
+
+- Top 20 vídeos más vistos globalmente (barras horizontales por categoría)
+- Vistas totales y cantidad de videos por país
+- Vistas · Likes · Dislikes y polaridad de interacción por país
+- Heatmap de vistas por categoría × país (nombres desde JSON)
+- Grado de interacción por zona y categoría (scatter de burbujas)
+- Polaridad positiva/negativa por categoría
+- Distribución de días hasta tendencia por velocidad de viralización
+- Treemap jerárquico País › Categoría
+
+### Instalación
+
+```bash
+conda activate youtube_pipeline
+pip install plotly
+```
+
+### Ejecución
+
+> Requiere haber corrido primero la Parte I para generar el CSV procesado.
+
+```bash
+python parte_2/parte_2_dashboard.py
+```
+
+El dashboard se guarda en `parte_2/dashboard_youtube.html`. Ábrelo en cualquier navegador.
+
+### Estructura
+
+```
+parte_2/
+├── parte_2_dashboard.py       # Script principal
+└── dashboard_youtube.html     # Generado al ejecutar (no se versiona)
+```
