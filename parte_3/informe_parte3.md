@@ -26,6 +26,6 @@ Además, se representó gráficamente esta relación mediante un diagrama de dis
 
 ---
 
-### ✔ Conclusión
+###  Conclusión
 
 La integración con MongoDB permitió almacenar y gestionar eficientemente los datos, mientras que las visualizaciones y el análisis de correlación facilitaron la comprensión del comportamiento de los videos en tendencia a nivel global.
